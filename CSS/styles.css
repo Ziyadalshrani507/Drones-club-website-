@@ -1,0 +1,399 @@
+/* Updated Color Scheme */
+:root {
+    --tech-blue: #0A1A2F;
+    --neon-cyan: #00F3FF;
+    --cyber-purple: #6C00FF;
+    --metal-gray: #2A2A2A;
+    --plasma-pink: #FF00FF;
+}
+
+/* Modernized Navigation */
+.menu-container {
+    z-index: 9999;
+    position: sticky;
+    background: linear-gradient(90deg, var(--tech-blue) 0%, var(--metal-gray) 100%);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--neon-cyan);
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
+
+}
+
+.menu-button {
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-button:hover {
+    transform: scale(1.1);
+    text-shadow: 0 0 10px var(--neon-cyan);
+}
+
+.menu-icon,
+.menu-icon::before,
+.menu-icon::after {
+    background: var(--neon-cyan);
+    box-shadow: 0 0 5px var(--neon-cyan);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    background: rgba(10, 26, 47, 0.95);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-direction: row; /* Horizontal by default */
+    border: 1px solid var(--neon-cyan);
+    backdrop-filter: blur(5px);
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s all ease;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .dropdown-content {
+        flex-direction: column;
+        left: 0;
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        top: 70px;
+        border: none;
+        border-bottom: 1px solid var(--neon-cyan);
+    }
+
+    .dropdown-content a {
+        text-align: center;
+        padding: 15px;
+        border-bottom: 1px solid rgba(0, 243, 255, 0.1);
+    }
+
+    .dropdown-content a:last-child {
+        border-bottom: none;
+    }
+}
+
+.dropdown-content a:hover::before {
+    content: '➤';
+    position: absolute;
+    left: 10px;
+    color: var(--neon-cyan);
+}
+
+/* Modern Body Styling */
+body {
+    background: radial-gradient(circle at center, #0A0E17 0%, #020203 100%);
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.content {
+    margin-top: 100px;
+    padding: 2rem;
+}
+
+/* Drone-inspired Homepage */
+.homepage-image {
+    border: 2px solid var(--neon-cyan);
+    box-shadow: 0 0 30px rgba(0, 243, 255, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.homepage-image:hover {
+    transform: scale(1.02);
+}
+
+/* Cyberpunk Team Tree */
+.node {
+    background: linear-gradient(145deg, var(--tech-blue) 0%, var(--cyber-purple) 100%);
+    border: 1px solid var(--neon-cyan);
+    box-shadow: 0 0 15px rgba(108, 0, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.node:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(108, 0, 255, 0.6);
+}
+
+/* Holographic Gallery */
+.gallery-container {
+    border: 1px solid var(--neon-cyan);
+    background: rgba(10, 26, 47, 0.7);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+button {
+    color: var(--neon-cyan);
+    text-shadow: 0 0 10px var(--neon-cyan);
+}
+
+button:hover {
+    color: var(--plasma-pink);
+    transform: scale(1.2);
+}
+
+#gallery-image {
+    border: 2px solid var(--neon-cyan);
+    box-shadow: 0 0 40px rgba(0, 243, 255, 0.2);
+}
+
+/* Updated styles.css */
+:root {
+    --tech-blue: #0A1A2F;
+    --neon-cyan: #00F3FF;
+    --cyber-purple: #6C00FF;
+    --metal-gray: #2A2A2A;
+    --plasma-pink: #FF00FF;
+}
+
+/* Improved Navigation */
+.menu-container {
+    padding: 15px 20px;
+    height: 70px;
+}
+
+.menu-button {
+    padding: 15px;
+}
+
+.dropdown-content {
+    top: 70px;
+    min-width: 200px;
+}
+
+.dropdown-content a {
+    color: #FFFFFF;
+    font-size: 18px;
+    text-shadow: 0 0 5px var(--neon-cyan);
+    padding: 15px 25px;
+}
+
+/* Homepage Adjustments */
+.content {
+    margin-top: 70px;
+    padding: 20px;
+    text-align: center;
+}
+
+.homepage-image {
+    max-width: 400px;
+    height: auto;
+    margin: 30px auto;
+}
+
+/* Update the navigation arrows */
+.navigation {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none; /* Allows clicking through empty spaces */
+}
+
+button {
+    background: transparent !important;
+    font-size: 48px;
+    padding: 0;
+    margin: 0 20px;
+    pointer-events: auto; /* Re-enable clicking on buttons */
+    transition: all 0.3s ease;
+    position: static;
+}
+
+#prev-button {
+    order: 1;
+}
+
+#next-button {
+    order: 2;
+}
+
+/* Center gallery image */
+.gallery-container {
+    justify-content: center;
+}
+
+.image-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gallery-image {
+    max-width: 70%;
+    max-height: 70vh;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    button {
+        font-size: 32px;
+        margin: 0 10px;
+    }
+
+    #gallery-image {
+        max-width: 90%;
+        max-height: 50vh;
+    }
+
+    .navigation {
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+}
+
+.gallery-container {
+    padding: 30px;
+    gap: 30px;
+}
+
+/* Team Page Improvements */
+.tree {
+    max-width: 1200px;
+    margin: 70px auto 0;
+    padding: 20px;
+}
+
+.level {
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.node {
+    flex: 0 1 250px;
+    padding: 15px;
+    min-width: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .homepage-image {
+        max-width: 90%;
+    }
+
+    .node {
+        flex: 0 1 90%;
+    }
+
+    button {
+        font-size: 48px;
+    }
+
+    #gallery-image {
+        max-width: 90%;
+        max-height: 50vh;
+    }
+
+    .gallery-container {
+        margin: 10px;
+        padding: 15px;
+    }
+}
+
+.menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.menu-icon {
+    position: relative;
+    width: 30px;
+    height: 3px;
+    background-color: var(--neon-cyan);
+    transition: all 0.3s ease;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.menu-icon::before {
+    transform: translateY(-8px);
+}
+
+.menu-icon::after {
+    transform: translateY(8px);
+}
+
+/* Hover effects */
+.menu-button:hover .menu-icon {
+    background-color: var(--plasma-pink);
+}
+
+.menu-button:hover .menu-icon::before,
+.menu-button:hover .menu-icon::after {
+    transform: translateY(0);
+    background-color: var(--plasma-pink);
+}
+
+
+/* Center events page content */
+.text-area {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.text-area h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.text-area h4 {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+
+/* Add to CSS */
+.content {
+    margin-top: 20px; /* Reduced from 70px */
+    padding: 10px; /* Reduced from 20px */
+}
+
+.homepage-image {
+    margin: 10px auto; /* Reduced vertical margin */
+    max-width: 350px; /* Slightly smaller default size */
+}
+
+@media (max-width: 768px) {
+    .content {
+        margin-top: 15px;
+        padding: 10px;
+    }
+
+    .homepage-image {
+        max-width: 280px;
+        margin: 10px auto;
+    }
+}

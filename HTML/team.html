@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Team</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+    <div class="menu-container">
+        <button class="menu-button">
+            <span class="menu-icon"></span>
+        </button>
+        <div class="dropdown-content">
+            <a href="/">Home</a>
+            <a href="about">About the club</a>
+            <a href="events">Events</a>
+            <a href="team">The Team</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdLchBrusx-y3Z20fE3PcLts4jwCf09q52Xy9MA4TTXlvs6Uw/viewform">Join Us</a>
+        </div>
+    </div>
+     <script>
+        // menu toggle and click-outside behavior
+        const menuButton = document.querySelector('.menu-button');
+        const dropdownContent = document.querySelector('.dropdown-content');
+
+        menuButton.addEventListener('click', (event) => {
+            event.stopPropagation();
+            dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+        });
+
+        document.addEventListener('click', () => {
+            dropdownContent.style.display = 'none';
+        });
+
+        dropdownContent.addEventListener('click', (event) => {
+            event.stopPropagation();
+        });
+    </script>
+    <div class="tree">
+        <div class="level">
+            <div class="node">
+                <strong>Supervisor</strong><br>Dr. Muhammad Bilal Kadri
+            </div>
+        </div>
+        <div class="level">
+            <div class="node">
+                <strong>President</strong><br>Ziyad Al-Shahrani
+            </div>
+            <div class="node">
+                <strong>Vice President</strong><br>Meshal Al-Juber
+            </div>
+        </div>
+        <div class="level">
+            <div class="node">
+                <strong>Head of Marketing Dept.</strong><br>Abdulmalik Mohameden
+            </div>
+            <div class="node">
+                <strong>Head of ****</strong><br>bro bruh
+            </div>
+            <div class="node">
+                <strong>Head of ****</strong><br>bro bruh
+            </div>
+            <div class="node">
+                <strong>Head of ****</strong><br>bro bruh
+            </div>
+        </div>
+    </div>
+</body>
+</html>

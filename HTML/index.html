@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+    <div class="menu-container">
+        <button class="menu-button">
+            <span class="menu-icon"></span>
+        </button>
+        <div class="dropdown-content">
+            <a href="/">Home</a>
+            <a href="about">About the club</a>
+            <a href="events">Events</a>
+            <a href="team">The Team</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdLchBrusx-y3Z20fE3PcLts4jwCf09q52Xy9MA4TTXlvs6Uw/viewform">Join Us</a>
+        </div>
+    </div>
+    <div class="content">
+    <h1>Welcome to the Home Page</h1>
+    <p>This is the main content area.</p>
+    <img src="static/images/logo.png" alt="Description of Image" class="homepage-image">
+    </div>
+
+
+
+    <script>
+        // JavaScript to handle menu toggle and click-outside behavior
+        const menuButton = document.querySelector('.menu-button');
+        const dropdownContent = document.querySelector('.dropdown-content');
+
+        // Toggle menu visibility on button click
+        menuButton.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent the click from bubbling up
+            dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Close the menu when clicking outside
+        document.addEventListener('click', () => {
+            dropdownContent.style.display = 'none';
+        });
+
+        // Prevent the menu from closing when clicking inside it
+        dropdownContent.addEventListener('click', (event) => {
+            event.stopPropagation();
+        });
+    </script>
+</body>
+</html>
