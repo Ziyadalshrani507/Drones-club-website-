@@ -1,5 +1,23 @@
 {
   "dependencies": {
     "express": "^4.21.2"
-  }
+  },
+  "name": "drones-club-website-",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ziyadalshrani507/Drones-club-website-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ziyadalshrani507/Drones-club-website-/issues"
+  },
+  "homepage": "https://github.com/Ziyadalshrani507/Drones-club-website-#readme",
+  "description": ""
 }
