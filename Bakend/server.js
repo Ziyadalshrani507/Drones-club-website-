@@ -15,6 +15,11 @@ app.get('/', (req, res) => {
     res.render(path.join(__dirname, '../Frontend/VIEWS', 'index'));
 });
 
+// Route to serve the index.ejs file
+app.get('/events', (req, res) => {
+    res.render(path.join(__dirname, '../Frontend/VIEWS', 'events'));
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
