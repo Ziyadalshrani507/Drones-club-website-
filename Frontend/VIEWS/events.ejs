@@ -4,44 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Events</title>
+  <link rel="stylesheet" href="../CSS/events.css">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 <body>
     <%- include('partials/header') %>
   <div class="gallery-container">
     <div class="image-area">
-      <img id="gallery-image" src="{{ url_for('static', filename='eventimages/' + images[0]) }}" alt="Image">
+      <img id="gallery-image" src="/images/eventimages/<%= images[0] %>" alt="Image">
     </div>
-    <div class="text-area">
-      <!-- Display the image title -->
-      <h1 id="image-title">{{ image_titles[images[0]] }}</h1>
-      <!-- Display the image description -->
-      <h4 id="image-text">{{ image_texts[images[0]] }}</h4>
+      <!-- Navigation Arrows -->
+    <div class="navigation">
+      <button id="prev-button" onclick="navigate(-1)">&lt;</button>
+      <button id="next-button" onclick="navigate(1)">&gt;</button>
     </div>
   </div>
 
-  <!-- Navigation Arrows -->
-  <div class="navigation">
-    <button id="prev-button" onclick="navigate(-1)">&lt;</button> <!-- Left Arrow -->
-    <button id="next-button" onclick="navigate(1)">&gt;</button> <!-- Right Arrow -->
-  </div>
 
   <script>
-    let images = {{ images|tojson }};
-    let imageTexts = {{ image_texts|tojson }};
-    let imageTitles = {{ image_titles|tojson }};
+    let images = <%- JSON.stringify(images) %>;
     let currentIndex = 0;
 
     function navigate(direction) {
-      currentIndex = (currentIndex + direction + images.length) % images.length;  // Loop around images
-      document.getElementById('gallery-image').src = '/static/eventimages/' + images[currentIndex];
-      document.getElementById('image-text').innerText = imageTexts[images[currentIndex]];
-      document.getElementById('image-title').innerText = imageTitles[images[currentIndex]];
+      currentIndex = (currentIndex + direction + images.length) % images.length;
+      document.getElementById('gallery-image').src = `/images/eventimages/${images[currentIndex]}`;
     }
   </script>
 
     <%- include('partials/footer') %>
 </body>
 </html>
-

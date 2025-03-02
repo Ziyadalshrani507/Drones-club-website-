@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -15,10 +16,19 @@ app.get('/', (req, res) => {
     res.render(path.join(__dirname, '../Frontend/VIEWS', 'index'));
 });
 
+
 // Route to serve the index.ejs file
+const eventImgDir = "../Frontend/images/eventimages";
 app.get('/events', (req, res) => {
-    res.render(path.join(__dirname, '../Frontend/VIEWS', 'events'));
-});
+    fs.readdir(eventImgDir, (err, files) => {
+      if (err) {
+        console.log(err);
+        console.log(files)
+        return res.status(500).send('Error loading images');
+      }
+      res.render(path.join(__dirname, '../Frontend/VIEWS', 'events'), { images: files }); 
+    });
+  });
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
