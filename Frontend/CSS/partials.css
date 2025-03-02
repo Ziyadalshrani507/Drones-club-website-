@@ -27,6 +27,7 @@ header {
     background: linear-gradient(90deg, var(--tech-blue) 0%, var(--metal-gray) 100%);
     backdrop-filter: blur(10px);
     box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
+    width: 30px;
     left: 20px;
 }
 
@@ -68,6 +69,7 @@ header {
     font-size: 18px;
     text-shadow: 0 0 5px var(--neon-cyan);
     padding: 15px 25px;
+    font-family: 'Orbitron', sans-serif;
 }
 
 
@@ -131,7 +133,26 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+.social-icons {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+
+
+
+.social-icons a:hover {
+    color: #007bff;
+    transform: scale(1.2);
 }
