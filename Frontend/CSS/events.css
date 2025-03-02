@@ -8,7 +8,6 @@
 
 
 body {
-    height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -46,12 +45,19 @@ button {
 
 /* Center gallery image */
 .gallery-container {
+    display: flex; /* Use flexbox for centering */
     justify-content: center;
+    align-items: center; /* Center items vertically */
     gap: 30px;
     border: 1px solid var(--neon-cyan);
+    border-right: 2px solid var(--neon-cyan);
     background-color: #00092c;
     backdrop-filter: blur(5px);
     padding: 2rem;
+    min-height: 65vh;
+    height: 65vh;
+    max-height: 65vh;
+    overflow: hidden;
 }
 
 .image-area {
@@ -61,8 +67,8 @@ button {
 }
 
 #gallery-image {
-    max-width: 70%;
-    max-height: 70vh;
+    max-width: 80%;
+    max-height: 80vh;
 }
 
 
