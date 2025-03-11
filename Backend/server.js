@@ -17,6 +17,11 @@ app.get('/', (req, res) => {
 });
 
 
+app.get('/joinus', (req, res) => {
+  res.render(path.join(__dirname, '../Frontend/VIEWS', 'join'));
+});
+
+
 // Route to serve the index.ejs file
 const eventImgDir = "../Frontend/images/eventimages";
 app.get('/events', (req, res) => {
@@ -27,6 +32,20 @@ app.get('/events', (req, res) => {
         return res.status(500).send('Error loading images');
       }
       res.render(path.join(__dirname, '../Frontend/VIEWS', 'events'), { images: files }); 
+    });
+  });
+
+
+
+const imgGalleryDir = "../Frontend/images/photogallery";
+app.get('/photogallery', (req, res) => {
+    fs.readdir(imgGalleryDir, (err, files) => {
+      if (err) {
+        console.log(err);
+        console.log(files)
+        return res.status(500).send('Error loading images');
+      }
+      res.render(path.join(__dirname, '../Frontend/VIEWS', 'photogallery'), { images: files }); 
     });
   });
 
