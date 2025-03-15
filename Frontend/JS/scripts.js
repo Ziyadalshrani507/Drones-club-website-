@@ -10,7 +10,7 @@ const members = [
     {
         role: 'Vice President',
         name: 'Meshal Al-Juber',
-        image: '../images/members/vice-president.jpg',
+        image: '/images/members/vice-president.jpg',
         major: 'Engineering',
         linkedin: 'https://www.linkedin.com/in/meshal-al-juber'
     },
