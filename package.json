@@ -1,7 +1,9 @@
 {
   "dependencies": {
     "ejs": "^3.1.10",
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "gsap": "^3.9.1",
+    "lottie-web": "^5.7.13"
   },
   "name": "drones-club-website-",
   "version": "1.0.0",

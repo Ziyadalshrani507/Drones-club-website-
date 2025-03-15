@@ -6,7 +6,6 @@
     --plasma-pink: #FF00FF;
 }
 
-
 body {
     margin: 0;
     padding: 0;
@@ -70,7 +69,6 @@ button {
     max-width: 80%;
     max-height: 80vh;
 }
-
 
 button:hover {
     color: var(--plasma-pink);

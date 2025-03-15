@@ -3,27 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Events</title>
+  <title>Photo Gallery</title>
   <link rel="stylesheet" href="../CSS/events.css">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 <body>
-    <%- include('partials/header') %>
+  <%- include('partials/header') %>
   <div class="gallery-container">
     <div class="image-area">
       <img id="gallery-image" src="/images/photogallery/<%= images[0] %>" alt="Image">
     </div>
-      <!-- Navigation Arrows -->
+    <!-- Navigation Arrows -->
     <div class="navigation">
       <button id="prev-button" onclick="navigate(-1)">&lt;</button>
       <button id="next-button" onclick="navigate(1)">&gt;</button>
     </div>
   </div>
 
-
   <script>
-    let images = <%- JSON.stringify(images) %>;
+    let images = JSON.parse('<%- JSON.stringify(images) %>');
+
     let currentIndex = 0;
 
     function navigate(direction) {
@@ -32,6 +32,6 @@
     }
   </script>
 
-    <%- include('partials/footer') %>
+  <%- include('partials/footer') %>
 </body>
 </html>

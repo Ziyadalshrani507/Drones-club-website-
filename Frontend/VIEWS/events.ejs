@@ -23,7 +23,8 @@
 
 
   <script>
-    let images = <%- JSON.stringify(images) %>;
+    let images = JSON.parse('<%- JSON.stringify(images) %>');
+
     let currentIndex = 0;
 
     function navigate(direction) {
