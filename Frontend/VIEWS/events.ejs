@@ -2,37 +2,103 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Events</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Events Gallery with Text</title>
+  <link rel="icon" href="../images/icon.png" type="image/x-icon">
   <link rel="stylesheet" href="../CSS/events.css">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
 </head>
 <body>
-    <%- include('partials/header') %>
+  <%- include('partials/header') %>
   <div class="gallery-container">
-    <div class="image-area">
-      <img id="gallery-image" src="/images/eventimages/<%= images[0] %>" alt="Image">
+    <!-- Text Section (Left) -->
+    <div class="text-section">
+      <h2 id="event-title">Event Title</h2>
+      <div id="event-description">
+        <p></p>
+        <p></p>
+      </div>
+      <div class="event-details">
+        <p><strong>Date:</strong> <span id="event-date"></span></p>
+        <p><strong>Location:</strong> <span id="event-location"></span></p>
+        <p><strong>Time:</strong> <span id="event-time"></span></p>
+      </div>
     </div>
+    
+    <!-- Image Area (Right) -->
+    <div class="image-area">
+      <img id="gallery-image" src="/images/eventimages/event1.jpg" alt="Event Image" class="fade-in">
+      
       <!-- Navigation Arrows -->
-    <div class="navigation">
-      <button id="prev-button" onclick="navigate(-1)">&lt;</button>
-      <button id="next-button" onclick="navigate(1)">&gt;</button>
+      <div class="navigation">
+        <button class="nav-button" id="prev-button" onclick="navigate(-1)" aria-label="Previous image">&lt;</button>
+        <button class="nav-button" id="next-button" onclick="navigate(1)" aria-label="Next image">&gt;</button>
+      </div>
+      
+      <!-- Image Counter -->
+      <div class="image-counter">
+        <span id="current-index"></span>/<span id="total-images"></span>
+      </div>
     </div>
   </div>
-
-
+  
   <script>
-    let images = JSON.parse('<%- JSON.stringify(images) %>');
-
+    // Sample data - You would replace this with your actual events data
+    const eventsData = [
+      {
+        title: "Drone Programming Workshop",
+        description: "Guided by Dr. Muhammad Bilal Kadri, PhD, participants explored UAV fundamentals, controlled drones with Python, and gained hands-on flight experience. The session covered drone technology, coding autonomous movements, and an outdoor flight test, bringing their programming to life!",
+        date: "February 13, 2025",
+        location: " Men’s Campus - Building 105, Room 1-A14",
+        time: "9:00 AM - 12:00 PM",
+        image: "/images/eventimages/event1.jpg"
+      },
+      {
+        title: "Another Event",
+        description: "des sdsk dkjfd  dhfkdjf kdf fk fiadkjhf d",
+        date: "April 5, 2025",
+        location: "Digital Arena, Downtown",
+        time: "2:00 PM - 8:00 PM",
+        image: "/images/eventimages/event2.jpg"
+      }
+    ];
+    
     let currentIndex = 0;
-
-    function navigate(direction) {
-      currentIndex = (currentIndex + direction + images.length) % images.length;
-      document.getElementById('gallery-image').src = `/images/eventimages/${images[currentIndex]}`;
+    const totalImages = eventsData.length;
+    
+    document.getElementById('total-images').textContent = totalImages;
+    
+    function updateEventInfo() {
+      const eventData = eventsData[currentIndex];
+      document.getElementById('event-title').textContent = eventData.title;
+      document.getElementById('event-description').innerHTML = `<p>${eventData.description}</p>`;
+      document.getElementById('event-date').textContent = eventData.date;
+      document.getElementById('event-location').textContent = eventData.location;
+      document.getElementById('event-time').textContent = eventData.time;
+      
+      const image = document.getElementById('gallery-image');
+      image.classList.remove('fade-in');
+      
+      // Trigger reflow to restart animation
+      void image.offsetWidth;
+      
+      image.src = eventData.image;
+      image.classList.add('fade-in');
+      
+      document.getElementById('current-index').textContent = currentIndex + 1;
     }
-  </script>
+    
+    function navigate(direction) {
+      currentIndex = (currentIndex + direction + totalImages) % totalImages;
+      updateEventInfo();
+    }
+    
+    // Initialize with first event
+    updateEventInfo();
 
-    <%- include('partials/footer') %>
+  </script>
+  
+  <%- include('partials/footer') %>
 </body>
 </html>
