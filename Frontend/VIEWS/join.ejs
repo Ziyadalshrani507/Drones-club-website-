@@ -2,27 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Join us</title>
-  <link rel="stylesheet" href="../CSS/events.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <style>
-    /* Centering the iframe */
-    .form-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  </style>
+  <title>Join the Drones Club | PSU</title>
+  <link rel="stylesheet" href="../CSS/joinus.css">
+  <link rel="icon" href="../images/icon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <%- include('partials/header') %>
     
-    <div class="form-container">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSey_oRQcA5FDL8wTvFCoYRZz_vcgdVaiTHB3C6GEZ3iDxGvSA/viewform?embedded=true" 
-              width="640" height="2052" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <div class="join-container">
+      <div class="join-header">
+        <h1>Join Our Drone Squadron</h1>
+        <p>Take your place at the cutting edge of <span class="highlight">drone technology</span>. 
+          The PSU Drones Club is looking for innovative minds to push the boundaries of what's possible.</p>
+      </div>
+      
+      <div class="join-content">
+        <div class="benefits-section">
+          <h2>Why Join Us?</h2>
+          <div class="benefits-grid">
+            <div class="benefit-card">
+              <div class="tech-icon">📈</div>
+              <h3>Skill Development</h3>
+              <p>Learn drone programming, and UAV operation through hands-on workshops and projects guided by experienced members.</p>
+            </div>
+            
+            <div class="benefit-card">
+              <div class="tech-icon">🔍</div>
+              <h3>Research Opportunities</h3>
+              <p>Participate in research projects and contribute to advancements in drone technology applications.</p>
+            </div>
+            
+            <div class="benefit-card">
+              <div class="tech-icon">🏆</div>
+              <h3>Competitions</h3>
+              <p>Represent PSU in national and international drone competitions and hackathons, testing your skills against the best.</p>
+            </div>
+            
+            <div class="benefit-card">
+              <div class="tech-icon">🌐</div>
+              <h3>Networking</h3>
+              <p>Connect with industry professionals, researchers, and fellow drone enthusiasts to build your professional network.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-section">
+          <h2>Ready for Takeoff?</h2>
+          <p style="text-align: center; margin-bottom: 20px;">Complete the application form below to join the PSU Drones Club. All skill levels welcome!</p>
+          
+          <div class="form-container">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSey_oRQcA5FDL8wTvFCoYRZz_vcgdVaiTHB3C6GEZ3iDxGvSA/viewform?embedded=true" 
+                    width="640" height="2052" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+          </div>
+        </div>
+      </div>
     </div>
+    
     <%- include('partials/footer') %>
 </body>
 </html>
