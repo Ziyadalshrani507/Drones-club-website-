@@ -2,36 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Photo Gallery</title>
-  <link rel="stylesheet" href="../CSS/events.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Events Gallery</title>
+  <link rel="icon" href="../images/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="../CSS/photogallery.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <%- include('partials/header') %>
+  
   <div class="gallery-container">
     <div class="image-area">
-      <img id="gallery-image" src="/images/photogallery/<%= images[0] %>" alt="Image">
+      <img id="gallery-image" src="/images/photogallery/<%= images[0] %>" alt="Event Image" class="fade-in">
     </div>
+    
     <!-- Navigation Arrows -->
     <div class="navigation">
-      <button id="prev-button" onclick="navigate(-1)">&lt;</button>
-      <button id="next-button" onclick="navigate(1)">&gt;</button>
+      <button class="nav-button" id="prev-button" onclick="navigate(-1)" aria-label="Previous image">&lt;</button>
+      <button class="nav-button" id="next-button" onclick="navigate(1)" aria-label="Next image">&gt;</button>
     </div>
+    
+    <!-- Image Counter -->
+    <div class="image-counter">
+      <span id="current-index">1</span>/<span id="total-images"><%= images.length %></span>
+    </div>
+    
   </div>
-
+  
   <script>
-    let images = JSON.parse('<%- JSON.stringify(images) %>');
-
+    // Image gallery functionality
+    let images = <%- JSON.stringify(images) %>;
     let currentIndex = 0;
-
+    
+    
+    // Initialize the gallery
+    function initGallery() {
+      
+      // Set up keyboard navigation
+      document.addEventListener('keydown', handleKeyPress);
+      
+      // Set initial state
+      updateCounter();
+    }
+    
+    // Navigation function - this is called directly from the HTML onclick attribute
     function navigate(direction) {
       currentIndex = (currentIndex + direction + images.length) % images.length;
-      document.getElementById('gallery-image').src = `/images/photogallery/${images[currentIndex]}`;
+      updateGallery();
     }
+    
+    function selectImage(index) {
+      currentIndex = index;
+      updateGallery();
+    }
+    
+    function updateGallery() {
+      const galleryImage = document.getElementById('gallery-image');
+      
+      // Change image source
+      galleryImage.src = `/images/photogallery/${images[currentIndex]}`;
+      
+      // Update counter
+      updateCounter();
+      
+    }
+    
+    function updateCounter() {
+      document.getElementById('current-index').textContent = currentIndex + 1;
+    }
+    
+    // Initialize when the page loads
+    window.onload = initGallery;
   </script>
-
+  
   <%- include('partials/footer') %>
 </body>
 </html>
