@@ -7,13 +7,19 @@
 }
 
 header {
-    background-color: #00092c; /* Updated to new blue color */
+    background-color: #00092c;
     color: white;
-    padding: 10px 0;
+    padding: 15px 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Space between logo and nav */
+    justify-content: center;
     position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
 }
 
 .logo-container img {
@@ -21,21 +27,150 @@ header {
     height: auto;
 }
 
-nav {
+/* Menu Container */
+.menu-container {
+    position: absolute;
+    left: 4vw;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+/* Menu Button */
+.menu-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.3s;
+    z-index: 1001;
 }
 
-nav a {
-    color: #00F3FF; /* Neon cyan color */
-    padding: 10px 20px;
+.menu-button:hover {
+    transform: scale(1.1);
+}
+
+.menu-button:focus {
+    outline: none;
+}
+
+/* Menu Icon (Hamburger) */
+.menu-icon {
+    position: relative;
+    width: 50px;
+    height: 3px;
+    background-color: var(--neon-cyan);
+    border-radius: 2px;
+    box-shadow: 0 0 8px rgba(0, 243, 255, 0.5);
+    transition: all 0.3s ease;
+    display: block; /* Add this */
+}
+
+.menu-icon::before,
+.menu-icon::after {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 3px;
+    background-color: var(--neon-cyan);
+    border-radius: 2px;
+    box-shadow: 0 0 8px rgba(0, 243, 255, 0.5);
+    transition: all 0.3s ease;
+    left: 0;
+}
+
+.menu-icon::before {
+    top: -8px;
+}
+
+.menu-icon::after {
+    top: 8px;
+}
+
+/* Menu Button Active State */
+.menu-button.active .menu-icon {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.menu-button.active .menu-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+    background-color: var(--plasma-pink);
+    box-shadow: 0 0 8px rgba(255, 0, 255, 0.5);
+}
+
+.menu-button.active .menu-icon::after {
+    transform: rotate(-45deg);
+    top: 0;
+    background-color: var(--plasma-pink);
+    box-shadow: 0 0 8px rgba(255, 0, 255, 0.5);
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: rgba(10, 26, 47, 0.95);
+    min-width: 220px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 243, 255, 0.2);
+    border: 1px solid var(--neon-cyan);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+/* Show dropdown when menu button is active */
+.menu-button.active + .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Menu Items */
+.dropdown-content a {
+    color: white;
+    font-family: 'Orbitron', sans-serif;
     text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s ease;
+    display: block;
+    padding: 15px 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border-left: 0 solid var(--neon-cyan);
 }
 
-nav a:hover {
-    color: #FF00FF; /* Plasma pink color on hover */
+.dropdown-content a:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 243, 255, 0.2);
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(0, 243, 255, 0.1);
+    border-left: 4px solid var(--neon-cyan);
+    padding-left: 30px;
+    color: var(--neon-cyan);
+    text-shadow: 0 0 8px rgba(0, 243, 255, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .dropdown-content {
+        left: -10px;
+        width: 100vw;
+        max-width: calc(100vw - 20px);
+        border-radius: 4px;
+    }
 }
 
 footer {
@@ -58,6 +193,9 @@ footer {
     font-size: 20px;
     text-decoration: none;
 }
+
+
+
 
 .social-icons a:hover {
     color: #007bff;
