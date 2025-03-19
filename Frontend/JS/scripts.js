@@ -3,42 +3,42 @@ const members = [
     {
         role: 'President',
         name: 'Ziyad Al-Shahrani',
-        image: '',
+        image: '../images/dark blue lLogo.png',
         major: 'Computer Science',
         linkedin: 'https://www.linkedin.com/in/ziyad-al-shahrani'
     },
     {
         role: 'Vice President',
         name: 'Meshal Al-Juber',
-        image: '/images/members/vice-president.jpg',
+        image: '../images/dark blue lLogo.png',
         major: 'Engineering',
         linkedin: 'https://www.linkedin.com/in/meshal-al-juber'
     },
     {
         role: 'Head of Marketing Dept.',
         name: 'Abdulmalik Mohameden',
-        image: '../images/members/head-marketing.jpg',
+        image: '../images/dark blue lLogo.png',
         major: 'Business Administration',
         linkedin: 'https://www.linkedin.com/in/abdulmalik-mohameden'
     },
     {
-        role: 'Head of Dept 1',
-        name: 'Member Name 1',
-        image: '../images/members/head-dept1.jpg',
-        major: 'Major 1',
+        role: 'Head of IT Dept.',
+        name: 'Ahmad Ammar',
+        image: '../images/dark blue lLogo.png',
+        major: 'Software Engineering',
         linkedin: 'https://www.linkedin.com/in/member-name-1'
     },
     {
-        role: 'Head of Dept 2',
+        role: 'Member',
         name: 'Member Name 2',
-        image: '../images/members/head-dept2.jpg',
+        image: '../images/dark blue lLogo.png',
         major: 'Major 2',
         linkedin: 'https://www.linkedin.com/in/member-name-2'
     },
     {
-        role: 'Head of Dept 3',
+        role: 'Member',
         name: 'Member Name 3',
-        image: '../images/members/head-dept3.jpg',
+        image: '../images/dark blue lLogo.png',
         major: 'Major 3',
         linkedin: 'https://www.linkedin.com/in/member-name-3'
     }
@@ -47,18 +47,14 @@ const members = [
 const membersContainer = document.getElementById('members-container');
 members.forEach(member => {
     const memberDiv = document.createElement('div');
-    memberDiv.classList.add('team-member');
+    memberDiv.classList.add('member');
     memberDiv.innerHTML = `
-        <div class="card">
-            <div class="card-front">
-                <img src="${member.image}" alt="${member.name}" class="member-photo">
-                <strong>${member.role}</strong><br>${member.name}
-            </div>
-            <div class="card-back">
-                <p>${member.major}</p>
-                <p>Leading department with expertise and dedication.</p>
-                <a href="${member.linkedin}" target="_blank" class="linkedin-button">LinkedIn</a>
-            </div>
+        <img src="${member.image}" alt="${member.name}" style="width: 150px; height: 150px;">
+        <div class="member-info">
+            <strong>${member.name}</strong>
+            <span class="role">${member.role}</span>
+            <strong>Major:</strong> ${member.major}<br>
+            <a href="${member.linkedin}" target="_blank" class="linkedin-button">LinkedIn</a>
         </div>
     `;
     membersContainer.appendChild(memberDiv);
