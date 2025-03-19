@@ -4,98 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="icon" href="../images/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="../CSS/home.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 <body>
     <%- include('partials/header') %>  
-    <main class="content">
-        <!-- Hero Section -->
-        <section class="hero parallax">
-            <video autoplay muted loop id="hero-video">
-                <source src="../images/photogallery/videoplayback.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="hero-content">
-                <h1 class="animated-text">Welcome to the Drones Club</h1>
-                <p class="typewriter">Explore the Future of Drone Technology</p>
-                <a href="joinus" class="cta-button">Join Now</a>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section class="club-info">
-            <h2>About the Club</h2>
-            <div class="two-column">
-                <div class="text-column">
-                    <p>
-                        <strong>Who We Are</strong><br>
-                        The Drones Club at Prince Sultan University (PSU) is a student-led organization that brings together technology enthusiasts, innovators, and researchers to explore the rapidly evolving field of Unmanned Aerial Vehicles (UAVs). Our club serves as a platform for students from diverse backgrounds—whether in computer science, engineering, or business—to learn about drone technology, programming, AI applications, and real-world implementations.
-                        <br><br>
-                        As drones become a key player in various industries such as agriculture, surveillance, logistics, and smart cities, the Drones Club aims to empower students with the skills and knowledge necessary to be at the forefront of this technological shift.
-                        <br><br>
-                        <strong>Our Mission</strong><br>
-                        The mission of the Drones Club at PSU is to educate, innovate, and collaborate in the field of UAV technology. Our goal is to:
-                        <ul>
-                            <li>✅ Educate students on drone technology, programming, and applications.</li>
-                            <li>✅ Empower members through hands-on learning and technical workshops.</li>
-                            <li>✅ Innovate by working on research and projects that push UAV technology forward.</li>
-                            <li>✅ Collaborate with industry experts, researchers, and faculty members.</li>
-                            <li>✅ Engage students in drone-related competitions, events, and projects that provide real-world experience.</li>
+        <main class="content">
+            <section class="hero parallax">
+                <video autoplay muted loop id="hero-video">
+                    <source src="../images/videoplayback.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="hero-content">
+                    <h1 class="animated-text">Welcome to the Drones Club</h1>
+                    <div class="typewriter-container">
+                        <p class="typewriter">Explore the Future of Drone Technology</p>
+                    </div>
+                    <a href="joinus" class="cta-button">Join Now</a>
+                </div>
+            </section>
+            <section class="club-info" id="about">
+                <h2>About the Club</h2>
+                <div class="info-content">
+                    <div class="info-section">
+                        <h3>Who We Are</h3>
+                        <div class="identity-container">
+                            <div class="identity-card main-card">
+                                <div class="glow-accent"></div>
+                                <div class="card-content">
+                                    <div class="tech-badge">EST. 2024</div>
+                                    <h4>PSU Drones Club</h4>
+                                    <p>
+                                        We are an <span class="highlight">officially recognized</span> student-led organization under the College of Computer and Information Sciences (CCIS) at Prince Sultan University. Founded in 2024, our club brings together technology enthusiasts, innovators, and researchers passionate about exploring the frontiers of Unmanned Aerial Vehicle technology.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="identity-pillars">
+                                <div class="identity-card">
+                                    <div class="glow-accent"></div>
+                                    <div class="card-content">
+                                        <h4>Our Focus</h4>
+                                        <p>
+                                            We specialize in drone technology, programming, and real-world applications. Our members develop technical skills while exploring how UAVs are transforming industries from agriculture to smart cities.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <div class="identity-card">
+                                    <div class="glow-accent"></div>
+                                    <div class="card-content">
+                                        <h4>Our Community</h4>
+                                        <p>
+                                            The club welcomes students from all academic backgrounds—computer science, engineering, business, and beyond. We believe diversity of thought and expertise drives innovation in drone technology.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="info-section">
+                        <h3 class="our-mission">Our Mission</h3>
+                        <ul class="mission-list">
+                            <li>Educate students on drone technology, programming, and applications.</li>
+                            <li>Empower members through hands-on learning and technical workshops.</li>
+                            <li>Innovate by working on research and projects that push UAV technology forward.</li>
+                            <li>Collaborate with industry experts, researchers, and faculty members.</li>
+                            <li>Engage students in drone-related competitions, events, and projects that provide real-world experience.</li>
                         </ul>
-                        <br>
-                        <strong>What We Do</strong><br>
-                        The Drones Club offers a wide range of activities and programs, allowing students to explore, build, and experiment with drones while gaining practical skills. Some of our key initiatives include:
-                        <br><br>
-                        🚀 <strong>Workshops & Hands-on Training</strong><br>
-                        We organize workshops where students can learn to program drones using Python, understand UAV mechanics, and gain practical flying experience. These workshops help beginners start from scratch while allowing advanced learners to experiment with autonomous flight, AI-driven drones, and IoT integrations.
-                        <br><br>
-                        🎯 <strong>Competitions & Hackathons</strong><br>
-                        The club participates in local and international drone competitions, providing members with the opportunity to test their skills in coding, hardware development, and real-world problem-solving. These challenges enhance teamwork, innovation, and critical thinking.
-                        <br><br>
-                        📡 <strong>Research & Development</strong><br>
-                        We encourage students to work on research projects that focus on drone applications in security, disaster response, environmental monitoring, and smart city solutions. With the support of faculty members and industry mentors, we explore how drones can be used for data analytics, automation, and AI-driven decision-making.
-                        <br><br>
-                        🤝 <strong>Industry Partnerships & Guest Lectures</strong><br>
-                        The club collaborates with tech companies, drone startups, and industry leaders to provide students with exposure to real-world projects and career opportunities. Our guest lectures feature experts from the UAV industry, offering insights into emerging trends, regulations, and innovations.
-                        <br><br>
-                        🌎 <strong>Community Engagement & Awareness</strong><br>
-                        Beyond technical projects, we aim to raise awareness about the ethical, legal, and environmental aspects of drone technology. Through outreach programs, we introduce younger students and the wider PSU community to the exciting world of UAVs.
-                    </p>
+                    </div>
+                    
+                    <div class="info-section">
+                        <h3>What We Do</h3>
+                        
+                        <div class="activity-container">
+                            <div class="activity-card">
+                                <div class="activity-icon">🚀</div>
+                                <h4>Workshops & Hands-on Training</h4>
+                            </div>
+                            
+                            <div class="activity-card">
+                                <div class="activity-icon">🎯</div>
+                                <h4>Competitions & Hackathons</h4>
+                            </div>
+                            
+                            <div class="activity-card">
+                                <div class="activity-icon">📡</div>
+                                <h4>Research & Development</h4>
+                            </div>
+                            
+                            <div class="activity-card">
+                                <div class="activity-icon">🤝</div>
+                                <h4>Industry Partnerships & Guest Lectures</h4>
+                            </div>
+                            
+                            <div class="activity-card">
+                                <div class="activity-icon">🌎</div>
+                                <h4>Community Engagement & Awareness</h4>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
-                <div class="image-column">
-                    <img src="../images/dark blue lLogo.png" alt="Drones Club">
-                </div>
-            </div>
-        </section>
-
-        <!-- Team Section -->
-        <section class="team">
-            <h2>Meet Our Team</h2>
-            <div class="team-grid" id="members-container">
-                <!-- Dynamic team members will be inserted here -->
-            </div>
-        </section>
-
-        <!-- Events Section -->
-        <section class="events">
-            <h2>Upcoming Events</h2>
-            <div class="events-grid">
-                <!-- Event details will be inserted here -->
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="contact">
-            <h2>Contact Us</h2>
-            <p>For more information, please reach out to us at...</p>
-        </section>
-        <a href="joinus" class="cta-button">Join the Club</a>
+            </section>
+            <section class="members-list" id="team">
+                <h2>Our Team</h2>
+                <div id="members-container"></div>
+            </section>
     </main>
     <%- include('partials/footer') %>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.13/lottie.min.js"></script>
     <script src="../JS/scripts.js"></script>
 </body>
 </html>
