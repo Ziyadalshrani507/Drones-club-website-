@@ -3,7 +3,7 @@ const members = [
     {
         role: 'President',
         name: 'Ziyad Al-Shahrani',
-        image: '../images/dark blue lLogo.png',
+        image: '../images/ziad.jpeg',
         major: 'Computer Science',
         linkedin: 'https://www.linkedin.com/in/ziyad-al-shahrani'
     },
@@ -17,30 +17,30 @@ const members = [
     {
         role: 'Head of Marketing Dept.',
         name: 'Abdulmalik Mohameden',
-        image: '../images/dark blue lLogo.png',
-        major: 'Business Administration',
-        linkedin: 'https://www.linkedin.com/in/abdulmalik-mohameden'
+        image: '../images/abd.jpeg',
+        major: 'Software Engineering',
+        linkedin: 'https://www.linkedin.com/in/abdulmalik-alshanqiti/'
     },
     {
         role: 'Head of IT Dept.',
         name: 'Ahmad Ammar',
         image: '../images/dark blue lLogo.png',
         major: 'Software Engineering',
-        linkedin: 'https://www.linkedin.com/in/member-name-1'
+        linkedin: 'https://www.linkedin.com/in/ahmad-ammar-003b4434a/'
     },
     {
-        role: 'Member',
-        name: 'Member Name 2',
-        image: '../images/dark blue lLogo.png',
-        major: 'Major 2',
-        linkedin: 'https://www.linkedin.com/in/member-name-2'
+        role: 'Head of project development',
+        name: 'Mohammed Alharthi',
+        image: '../images/harthy.jpg',
+        major: 'Electrical Engineering',
+        linkedin: 'https://www.linkedin.com/in/mohammed-alharthi-b5956524a/'
     },
     {
-        role: 'Member',
-        name: 'Member Name 3',
-        image: '../images/dark blue lLogo.png',
-        major: 'Major 3',
-        linkedin: 'https://www.linkedin.com/in/member-name-3'
+        role: 'Head of Public Relations',
+        name: 'Saud Fahad Almujarri',
+        image: '../images/saud.jpeg',
+        major: ' Civil and environmental engineering',
+        linkedin: 'https://www.linkedin.com/in/saud-almujarri-9ba5a82a8/'
     }
 ];
 
