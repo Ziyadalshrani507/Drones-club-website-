@@ -575,7 +575,6 @@ ul {
     position: relative;
     overflow: hidden;
 }
-
 /* Add the same subtle tech pattern background */
 .members-list::before {
     content: '';
@@ -584,25 +583,23 @@ ul {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: radial-gradient(#00F3FF 1px, transparent 1px), 
+    background-image: radial-gradient(#00F3FF 1px, transparent 1px),
                       radial-gradient(#00F3FF 1px, transparent 1px);
     background-size: 30px 30px;
     background-position: 0 0, 15px 15px;
     opacity: 0.05;
     z-index: 1;
 }
-
 .members-list h2 {
     font-family: 'Orbitron', sans-serif;
     color: #00F3FF; /* Neon cyan color */
     font-size: 42px;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
     position: relative;
     z-index: 2;
     text-shadow: 0 0 15px rgba(0, 243, 255, 0.5); /* Glow effect */
 }
-
 .members-list h2::after {
     content: '';
     display: block;
@@ -612,14 +609,48 @@ ul {
     margin: 15px auto 0;
 }
 
-/* Members Container Grid Layout */
-#members-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
+/* Section Title Styling */
+.section-title {
+    font-family: 'Orbitron', sans-serif;
+    color: #00F3FF;
+    font-size: 28px;
+    text-align: center;
+    margin: 30px 0;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.4);
+}
+.section-title::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00F3FF, transparent);
+    margin: 10px auto 0;
+}
+
+/* Members Section Styling */
+.members-section {
+    margin-bottom: 50px;
     position: relative;
     z-index: 2;
     max-width: 1200px;
+    margin: 0 auto 50px;
+    margin-bottom: 80px;
+}
+
+/* Members Grid Layout */
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Faculty grid specific styling - center the cards */
+.members-section:first-child .members-grid {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    justify-content: center;
+    max-width: 700px;
     margin: 0 auto;
 }
 
@@ -636,13 +667,11 @@ ul {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     border-left: 3px solid #00F3FF;
 }
-
 .member:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 25px rgba(0, 243, 255, 0.2);
     background-color: rgba(0, 243, 255, 0.1);
 }
-
 .member img {
     width: 150px;
     height: 150px;
@@ -652,18 +681,15 @@ ul {
     box-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
     margin-bottom: 20px;
 }
-
 .member-info {
     width: 100%;
 }
-
 .member-info strong {
     color: #00F3FF;
     font-size: 1.2rem;
     display: block;
     margin-bottom: 5px;
 }
-
 .member-info .role {
     display: block;
     font-size: 0.95rem;
@@ -671,7 +697,6 @@ ul {
     color: white;
     font-style: italic;
 }
-
 .linkedin-button {
     display: inline-block;
     background: linear-gradient(135deg, #00F3FF, #0085FF);
@@ -684,24 +709,63 @@ ul {
     transition: all 0.3s ease;
     box-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
 }
-
 .linkedin-button:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(0, 243, 255, 0.7);
 }
 
+/* Faculty Section Specific Styling */
+.members-section:first-child .member {
+    border-left-color: #FFD700; /* Gold border for faculty */
+}
+.members-section:first-child .member img {
+    border-color: #FFD700; /* Gold border for faculty images */
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+.members-section:first-child .member:hover {
+    box-shadow: 0 12px 25px rgba(255, 215, 0, 0.2);
+}
+.members-section:first-child .section-title {
+    color: #FFD700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+}
+.members-section:first-child .section-title::after {
+    background: linear-gradient(90deg, transparent, #FFD700, transparent);
+}
+.members-section:first-child .member-info strong {
+    color: #FFD700;
+}
+
+/* Golden LinkedIn buttons for faculty */
+.members-section:first-child .linkedin-button {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+.members-section:first-child .linkedin-button:hover {
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+}
+
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
-    #members-container {
+    .members-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    .members-section:first-child .members-grid {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
 }
 
-@media screen and (max-width: 480px) {
-    #members-container {
+@media screen and (max-width: 650px) {
+    .members-section:first-child .members-grid {
         grid-template-columns: 1fr;
     }
-    
+}
+
+@media screen and (max-width: 480px) {
+    .members-grid {
+        grid-template-columns: 1fr;
+    }
+   
     .member {
         max-width: 100%;
     }
