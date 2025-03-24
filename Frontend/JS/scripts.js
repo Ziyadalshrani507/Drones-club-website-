@@ -19,12 +19,8 @@ const members = [
     {
         role: 'President',
         name: 'Ziyad Al-Shahrani',
-<<<<<<< Updated upstream
-        image: '../images/dark blue lLogo.png',
-=======
         image: '../images/ziad.jpeg',
         type: 'student',
->>>>>>> Stashed changes
         major: 'Computer Science',
         linkedin: 'https://www.linkedin.com/in/ziyad-al-shahrani'
     },
@@ -39,16 +35,10 @@ const members = [
     {
         role: 'Head of Marketing',
         name: 'Abdulmalik Mohameden',
-<<<<<<< Updated upstream
-        image: '../images/dark blue lLogo.png',
-        major: 'Business Administration',
-        linkedin: 'https://www.linkedin.com/in/abdulmalik-mohameden'
-=======
         image: '../images/abd.jpeg',
         type: 'student',
         major: 'Software Engineering',
         linkedin: 'https://www.linkedin.com/in/abdulmalik-alshanqiti/'
->>>>>>> Stashed changes
     },
     {
         role: 'Head of IT',
@@ -56,23 +46,9 @@ const members = [
         image: '../images/ahmad.png',
         type: 'student',
         major: 'Software Engineering',
-        linkedin: 'https://www.linkedin.com/in/member-name-1'
+        linkedin: 'https://www.linkedin.com/in/ahmad-ammar-003b4434a/'
     },
     {
-<<<<<<< Updated upstream
-        role: 'Member',
-        name: 'Member Name 2',
-        image: '../images/dark blue lLogo.png',
-        major: 'Major 2',
-        linkedin: 'https://www.linkedin.com/in/member-name-2'
-    },
-    {
-        role: 'Member',
-        name: 'Member Name 3',
-        image: '../images/dark blue lLogo.png',
-        major: 'Major 3',
-        linkedin: 'https://www.linkedin.com/in/member-name-3'
-=======
         role: 'Head of Project Development',
         name: 'Mohammed Alharthi',
         image: '../images/harthy.jpg',
@@ -87,7 +63,6 @@ const members = [
         type: 'student',
         major: ' Civil and environmental engineering',
         linkedin: 'https://www.linkedin.com/in/saud-almujarri-9ba5a82a8/'
->>>>>>> Stashed changes
     }
 ];
 
