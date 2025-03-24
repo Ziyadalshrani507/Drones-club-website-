@@ -5,7 +5,7 @@ const members = [
         name: 'Dr. Mohammed Alshara',
         image: '../images/dralshara.png',
         type: 'faculty',
-        department: 'Production Engineering Management',
+        college: 'College of Computer and Information Sciences',
         linkedin: 'https://www.linkedin.com/in/mohammed-alshara-b9551688'
     },
     {
@@ -13,7 +13,7 @@ const members = [
         name: 'Dr. Muhammad Bilal Kadri',
         image: '../images/drkadri.png',
         type: 'faculty',
-        department: 'Production Engineering Management',
+        college: 'College of Computer and Information Sciences',
         linkedin: 'https://www.linkedin.com/in/muhammad-bilal-kadri-phd-277b3811'
     },
     {
@@ -84,42 +84,6 @@ const membersContainer = document.getElementById('members-container');
 // Clear the container first (in case there's any existing content)
 membersContainer.innerHTML = '';
 
-// Create faculty section
-if (facultyMembers.length > 0) {
-    const facultySection = document.createElement('div');
-    facultySection.classList.add('members-section');
-    
-    // Add section title
-    const facultyTitle = document.createElement('h3');
-    facultyTitle.classList.add('section-title');
-    facultyTitle.textContent = 'Faculty Advisors';
-    facultySection.appendChild(facultyTitle);
-    
-    // Create faculty members grid
-    const facultyGrid = document.createElement('div');
-    facultyGrid.classList.add('members-grid');
-    
-    // Add each faculty member
-    facultyMembers.forEach(member => {
-        const memberDiv = document.createElement('div');
-        memberDiv.classList.add('member');
-        
-        memberDiv.innerHTML = `
-            <img src="${member.image}" alt="${member.name}" style="width: 150px; height: 150px;">
-            <div class="member-info">
-                <strong>${member.name}</strong>
-                <span class="role">${member.role}</span>
-                <strong>Department:</strong> ${member.department}<br>
-                <a href="${member.linkedin}" target="_blank" class="linkedin-button">LinkedIn</a>
-            </div>
-        `;
-        facultyGrid.appendChild(memberDiv);
-    });
-    
-    facultySection.appendChild(facultyGrid);
-    membersContainer.appendChild(facultySection);
-}
-
 // Create student section
 if (studentMembers.length > 0) {
     const studentSection = document.createElement('div');
@@ -154,4 +118,41 @@ if (studentMembers.length > 0) {
     
     studentSection.appendChild(studentGrid);
     membersContainer.appendChild(studentSection);
+
+    // Create faculty section
+if (facultyMembers.length > 0) {
+    const facultySection = document.createElement('div');
+    facultySection.classList.add('members-section');
+    
+    // Add section title
+    const facultyTitle = document.createElement('h3');
+    facultyTitle.classList.add('section-title');
+    facultyTitle.textContent = 'Faculty Advisors';
+    facultySection.appendChild(facultyTitle);
+    
+    // Create faculty members grid
+    const facultyGrid = document.createElement('div');
+    facultyGrid.classList.add('members-grid');
+    
+    // Add each faculty member
+    facultyMembers.forEach(member => {
+        const memberDiv = document.createElement('div');
+        memberDiv.classList.add('member');
+        
+        memberDiv.innerHTML = `
+            <img src="${member.image}" alt="${member.name}" style="width: 150px; height: 150px;">
+            <div class="member-info">
+                <strong>${member.name}</strong>
+                <span class="role">${member.role}</span>
+                <strong>college:</strong> ${member.college}<br>
+                <a href="${member.linkedin}" target="_blank" class="linkedin-button">LinkedIn</a>
+            </div>
+        `;
+        facultyGrid.appendChild(memberDiv);
+    });
+    
+    facultySection.appendChild(facultyGrid);
+    membersContainer.appendChild(facultySection);
+}
+
 }
