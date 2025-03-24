@@ -537,8 +537,8 @@ ul {
     background: rgba(0, 243, 255, 0.1);
     padding: 15px;
     border-radius: 10px;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     border-left: 3px solid #00F3FF;
@@ -559,7 +559,7 @@ ul {
 }
 
 .activity-card h4 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: center;  /* Ensures text is centered */
     width: 100%;
 }
