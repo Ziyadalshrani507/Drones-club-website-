@@ -647,7 +647,7 @@ ul {
 }
 
 /* Faculty grid specific styling - center the cards */
-.members-section:first-child .members-grid {
+.members-section:last-child .members-grid {
     grid-template-columns: repeat(2, minmax(300px, 1fr));
     justify-content: center;
     max-width: 700px;
@@ -715,33 +715,33 @@ ul {
 }
 
 /* Faculty Section Specific Styling */
-.members-section:first-child .member {
+.members-section:last-child .member {
     border-left-color: #FFD700; /* Gold border for faculty */
 }
-.members-section:first-child .member img {
+.members-section:last-child .member img {
     border-color: #FFD700; /* Gold border for faculty images */
     box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
 }
-.members-section:first-child .member:hover {
+.members-section:last-child .member:hover {
     box-shadow: 0 12px 25px rgba(255, 215, 0, 0.2);
 }
-.members-section:first-child .section-title {
+.members-section:last-child .section-title {
     color: #FFD700;
     text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
 }
-.members-section:first-child .section-title::after {
+.members-section:last-child .section-title::after {
     background: linear-gradient(90deg, transparent, #FFD700, transparent);
 }
-.members-section:first-child .member-info strong {
+.members-section:last-child .member-info strong {
     color: #FFD700;
 }
 
 /* Golden LinkedIn buttons for faculty */
-.members-section:first-child .linkedin-button {
+.members-section:last-child .linkedin-button {
     background: linear-gradient(135deg, #FFD700, #FFA500);
     box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
 }
-.members-section:first-child .linkedin-button:hover {
+.members-section:last-child .linkedin-button:hover {
     box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
 }
 
@@ -750,13 +750,13 @@ ul {
     .members-grid {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
-    .members-section:first-child .members-grid {
+    .members-section:last-child .members-grid {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
 }
 
 @media screen and (max-width: 650px) {
-    .members-section:first-child .members-grid {
+    .members-section:last-child .members-grid {
         grid-template-columns: 1fr;
     }
 }
