@@ -27,7 +27,7 @@ const members = [
     {
         role: 'Vice President',
         name: 'Meshal Al-Juber',
-        image: '../images/dark blue lLogo.png',
+        image: '../images/meshal.jpeg',
         type: 'student',
         major: 'Production Engineering Management',
         linkedin: 'https://www.linkedin.com/in/meshal-al-juber'
