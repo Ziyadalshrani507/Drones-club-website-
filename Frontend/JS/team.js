@@ -60,6 +60,7 @@ const members = [
         role: 'Head of Public Relations',
         name: 'Saud Fahad Almujarri',
         image: '../images/saud.jpeg',
+        type: 'student',
         major: ' Civil and environmental engineering',
         linkedin: 'https://www.linkedin.com/in/saud-almujarri-9ba5a82a8/'
     },
