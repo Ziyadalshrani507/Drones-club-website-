@@ -57,6 +57,13 @@ const members = [
         linkedin: 'https://www.linkedin.com/in/mohammed-alharthi-b5956524a/'
     },
     {
+        role: 'Head of Public Relations',
+        name: 'Saud Fahad Almujarri',
+        image: '../images/saud.jpeg',
+        major: ' Civil and environmental engineering',
+        linkedin: 'https://www.linkedin.com/in/saud-almujarri-9ba5a82a8/'
+    },
+    {
         role: 'Head of Human Resources',
         name: 'name',
         image: '../images/dark blue lLogo.png',
