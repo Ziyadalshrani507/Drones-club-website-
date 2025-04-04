@@ -66,19 +66,21 @@ const members = [
     },
     {
         role: 'Head of Human Resources (OPEN)',
-        name: 'Interested? <a href="/joinus" style="text-decoration: underline; font-style: italic;">Apply</a>',
-        image: '../images/dark blue lLogo.png',
+        name: 'Interested?',
+        image: '../images/open_position.jpg',
         type: 'student',
         major: ' Preferably CCIS / Open ',
-        linkedin: 'https://www.linkedin.com'
+        linkedin: 'https://www.linkedin.com',
+        isOpen: true  // Flag to identify open positions
     },
     {
         role: 'Head of Event Management (OPEN)',
-        name: 'Interested? <a href="/joinus" style="text-decoration: underline; font-style: italic;">Apply</a>',
-        image: '../images/dark blue lLogo.png',
+        name: 'Interested?',
+        image: '../images/open_position.jpg',
         type: 'student',
         major: 'Preferably CCIS / Open',
-        linkedin: 'https://www.linkedin.com'
+        linkedin: 'https://www.linkedin.com',
+        isOpen: true  // Flag to identify open positions
     }
 ];
 
@@ -112,10 +114,15 @@ if (studentMembers.length > 0) {
         const memberDiv = document.createElement('div');
         memberDiv.classList.add('member');
         
+        // Check if this is an open position and render name differently
+        const nameDisplay = member.isOpen ? 
+            `${member.name} <a href="/joinus" style="text-decoration: underline;">Apply</a>` : 
+            member.name;
+        
         memberDiv.innerHTML = `
             <img src="${member.image}" alt="${member.name}" style="width: 150px; height: 150px;">
             <div class="member-info">
-                <strong>${member.name}</strong>
+                <strong>${nameDisplay}</strong>
                 <span class="role">${member.role}</span>
                 <strong>Major:</strong> ${member.major}<br>
                 <a href="${member.linkedin}" target="_blank" class="linkedin-button">LinkedIn</a>
