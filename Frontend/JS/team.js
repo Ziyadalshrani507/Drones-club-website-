@@ -66,7 +66,7 @@ const members = [
     },
     {
         role: 'Head of Human Resources (OPEN)',
-        name: 'Interested? Fill out the form in <a href="/joinus" target="_blank">Join Us</a>',
+        name: 'Interested? Fill out the form in <a href="/joinus" style="text-decoration: underline; font-style: italic;">Join Us</a>',
         image: '../images/dark blue lLogo.png',
         type: 'student',
         major: ' Preferably CCIS / Open ',
@@ -74,7 +74,7 @@ const members = [
     },
     {
         role: 'Head of Event Management (OPEN)',
-        name: 'Interested? Fill out the form in <a href="/joinus" target="_blank">Join Us</a>',
+        name: 'Interested? Fill out the form in <a href="/joinus" style="text-decoration: underline; font-style: italic;">Join Us</a>',
         image: '../images/dark blue lLogo.png',
         type: 'student',
         major: 'Preferably CCIS / Open',
