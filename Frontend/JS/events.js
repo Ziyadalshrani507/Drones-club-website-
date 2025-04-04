@@ -8,11 +8,11 @@ const eventsData = [
       image: "/images/eventimages/event1.jpg"
     },
     {
-      title: "Another Event",
-      description: "des sdsk dkjfd  dhfkdjf kdf fk fiadkjhf d",
-      date: "April 5, 2025",
-      location: "Digital Arena, Downtown",
-      time: "2:00 PM - 8:00 PM",
+      title: "Code The Sky",
+      description: "Drone Programming Workshop",
+      date: "February 13, 2025",
+      location: "Building 105",
+      time: "9:00 AM - 11:00 AM",
       image: "/images/eventimages/event2.jpg"
     }
   ];
