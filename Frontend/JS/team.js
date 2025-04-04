@@ -65,16 +65,16 @@ const members = [
         linkedin: 'https://www.linkedin.com/in/saud-almujarri-9ba5a82a8/'
     },
     {
-        role: 'Head of Human Resources',
-        name: 'Interested? You can apply by filling out the form under the "Join Us"',
+        role: 'Head of Human Resources (OPEN)',
+        name: 'Interested? Fill out the form in <a href="/joinus" target="_blank">Join Us</a>',
         image: '../images/dark blue lLogo.png',
         type: 'student',
         major: ' Preferably CCIS / Open ',
         linkedin: 'https://www.linkedin.com'
     },
     {
-        role: 'Head of Event Management',
-        name: 'Interested? You can apply by filling out the form under the "Join Us"',
+        role: 'Head of Event Management (OPEN)',
+        name: 'Interested? Fill out the form in <a href="/joinus" target="_blank">Join Us</a>',
         image: '../images/dark blue lLogo.png',
         type: 'student',
         major: 'Preferably CCIS / Open',
