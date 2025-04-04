@@ -17,11 +17,11 @@ const members = [
         linkedin: 'https://www.linkedin.com/in/muhammad-bilal-kadri-phd-277b3811'
     },
     {
-        role: 'President',
+        role: 'President & Founder',
         name: 'Ziyad Al-Shahrani',
         image: '../images/ziad.jpeg',
         type: 'student',
-        major: 'Computer Science',
+        major: 'Software Engineering',
         linkedin: 'https://www.linkedin.com/in/ziyad-al-shahrani'
     },
     {
@@ -66,18 +66,18 @@ const members = [
     },
     {
         role: 'Head of Human Resources',
-        name: 'name',
+        name: 'Interested? You can apply by filling out the form under the "Join Us"',
         image: '../images/dark blue lLogo.png',
         type: 'student',
-        major: ' major',
+        major: ' Preferably CCIS / Open ',
         linkedin: 'https://www.linkedin.com'
     },
     {
         role: 'Head of Event Management',
-        name: 'name',
+        name: 'Interested? You can apply by filling out the form under the "Join Us"',
         image: '../images/dark blue lLogo.png',
         type: 'student',
-        major: 'major',
+        major: 'Preferably CCIS / Open',
         linkedin: 'https://www.linkedin.com'
     }
 ];
