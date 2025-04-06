@@ -65,20 +65,19 @@ const members = [
         linkedin: 'https://www.linkedin.com/in/saud-almujarri-9ba5a82a8/'
     },
     {
+        role: 'Head of Event Management',
+        name: 'Ahmad Alakakah',
+        image: '../images/ahmed.jpg',
+        type: 'student',
+        major: 'Information Systems',
+        linkedin: 'https://www.linkedin.com/in/ahmad-alakakah-51a11622a/',
+    },
+    {
         role: 'Head of Human Resources (OPEN)',
-        name: 'Interested?',
+        name: '',
         image: '../images/open_position.jpg',
         type: 'student',
         major: ' Preferably CCIS / Open ',
-        linkedin: 'https://www.linkedin.com',
-        isOpen: true  // Flag to identify open positions
-    },
-    {
-        role: 'Head of Event Management (OPEN)',
-        name: 'Interested?',
-        image: '../images/open_position.jpg',
-        type: 'student',
-        major: 'Preferably CCIS / Open',
         linkedin: 'https://www.linkedin.com',
         isOpen: true  // Flag to identify open positions
     }
