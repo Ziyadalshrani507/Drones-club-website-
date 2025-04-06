@@ -162,3 +162,36 @@ body {
 .fade-in {
   animation: fadeIn 0.5s ease-in-out;
 }
+
+/* Status Labels */
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.status-label {
+  position: absolute;
+  top: 15px;
+  right: -35px;
+  width: 150px;
+  padding: 7px 0;
+  background-color: #F44336;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transform: rotate(45deg);
+  z-index: 10;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.upcoming {
+  background-color: #4CAF50; /* Green background */
+}
+
+.ended {
+  background-color: #F44336; /* Red background */
+}
